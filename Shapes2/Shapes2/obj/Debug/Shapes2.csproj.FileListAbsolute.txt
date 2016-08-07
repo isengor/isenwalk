@@ -1,0 +1,10 @@
+c:\users\ilya\documents\visual studio 2013\Projects\Shapes2\Shapes2\bin\Debug\Shapes2.exe.config
+c:\users\ilya\documents\visual studio 2013\Projects\Shapes2\Shapes2\bin\Debug\Shapes2.exe
+c:\users\ilya\documents\visual studio 2013\Projects\Shapes2\Shapes2\bin\Debug\Shapes2.pdb
+c:\users\ilya\documents\visual studio 2013\Projects\Shapes2\Shapes2\obj\Debug\Shapes2.Properties.Resources.resources
+c:\users\ilya\documents\visual studio 2013\Projects\Shapes2\Shapes2\obj\Debug\Shapes2.csproj.GenerateResource.Cache
+c:\users\ilya\documents\visual studio 2013\Projects\Shapes2\Shapes2\obj\Debug\Shapes2.exe
+c:\users\ilya\documents\visual studio 2013\Projects\Shapes2\Shapes2\obj\Debug\Shapes2.pdb
+C:\Users\Ilya\Documents\Visual Studio 2013\Projects\Shapes2\Shapes2\obj\Debug\Shapes2.csprojResolveAssemblyReference.cache
+C:\Users\Ilya\Documents\Visual Studio 2013\Projects\Shapes2\Shapes2\obj\Debug\Shapes2.MainMenu.resources
+C:\Users\Ilya\Documents\Visual Studio 2013\Projects\Shapes2\Shapes2\obj\Debug\Shapes2.Form1.resources
