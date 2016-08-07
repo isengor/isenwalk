@@ -18,3 +18,6 @@ C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Properties.Resources.
 C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.csproj.GenerateResource.Cache
 C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Mainmenu.resources
 C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Wonform.resources
+C:\Users\Ilya\Desktop\MyProject\isenwalk\Isenwalk\bin\Debug\Isenwalk.exe.config
+C:\Users\Ilya\Desktop\MyProject\isenwalk\Isenwalk\obj\Debug\Isenwalk.exe
+C:\Users\Ilya\Desktop\MyProject\isenwalk\Isenwalk\obj\Debug\Isenwalk.pdb
