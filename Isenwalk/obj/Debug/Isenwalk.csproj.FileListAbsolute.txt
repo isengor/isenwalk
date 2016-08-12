@@ -1,0 +1,31 @@
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\bin\Debug\Isenwalk.exe.config
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\bin\Debug\Isenwalk.exe
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\bin\Debug\Isenwalk.pdb
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\obj\Debug\Isenwalk.csprojResolveAssemblyReference.cache
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\obj\Debug\Isenwalk.Form1.resources
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\obj\Debug\Isenwalk.Properties.Resources.resources
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\obj\Debug\Isenwalk.csproj.GenerateResource.Cache
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\obj\Debug\Isenwalk.exe
+c:\users\ilya\documents\visual studio 2013\Projects\Isenwalk\Isenwalk\obj\Debug\Isenwalk.pdb
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\bin\Debug\Isenwalk.exe.config
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.exe
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.pdb
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\bin\Debug\Isenwalk.exe
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\bin\Debug\Isenwalk.pdb
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.csprojResolveAssemblyReference.cache
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Form1.resources
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Properties.Resources.resources
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.csproj.GenerateResource.Cache
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Mainmenu.resources
+C:\Users\Ilya\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Wonform.resources
+C:\Users\User\Desktop\isenwalk\Isenwalk\bin\Debug\Isenwalk.exe.config
+C:\Users\User\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.exe
+C:\Users\User\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.pdb
+C:\Users\User\Desktop\isenwalk\Isenwalk\bin\Debug\Isenwalk.exe
+C:\Users\User\Desktop\isenwalk\Isenwalk\bin\Debug\Isenwalk.pdb
+C:\Users\User\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Form1.resources
+C:\Users\User\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Mainmenu.resources
+C:\Users\User\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Properties.Resources.resources
+C:\Users\User\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.Wonform.resources
+C:\Users\User\Desktop\isenwalk\Isenwalk\obj\Debug\Isenwalk.csproj.GenerateResource.Cache
