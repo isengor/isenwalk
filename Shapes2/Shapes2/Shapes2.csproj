@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27ECD939-975C-4959-8DB0-E33989072936}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shapes2</RootNamespace>
+    <AssemblyName>Shapes2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atack.cs" />
+    <Compile Include="Collision.cs" />
+    <Compile Include="Conectionwindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conectionwindow.Designer.cs">
+      <DependentUpon>Conectionwindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalGameForm.Designer.cs">
+      <DependentUpon>LocalGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternetGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternetGameForm.Designer.cs">
+      <DependentUpon>InternetGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainData.cs" />
+    <Compile Include="InternetModMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternetModMenu.Designer.cs">
+      <DependentUpon>InternetModMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delegates.cs" />
+    <Compile Include="LocalModMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalModMenu.Designer.cs">
+      <DependentUpon>LocalModMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wonform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wonform.Designer.cs">
+      <DependentUpon>Wonform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Conectionwindow.resx">
+      <DependentUpon>Conectionwindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalGameForm.resx">
+      <DependentUpon>LocalGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternetGameForm.resx">
+      <DependentUpon>InternetGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternetModMenu.resx">
+      <DependentUpon>InternetModMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalModMenu.resx">
+      <DependentUpon>LocalModMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Wonform.resx">
+      <DependentUpon>Wonform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ground2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mario-ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flame.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ground3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lich_left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lich_right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mag_left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mag_right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swords.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\landscape.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_fireball_left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_fireball_right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explosion2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireball3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireball3_left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rip3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stars.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion8sound.wav" />
+    <None Include="Resources\Mushroomsound.wav" />
+    <None Include="Resources\Shootsound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onecomputer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
