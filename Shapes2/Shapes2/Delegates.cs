@@ -19,14 +19,15 @@ namespace Shapes2
         delegate void Enemy_move();
         delegate bool Enemy_jump();
         private Form form;
-        private PictureBox player;
-        private PictureBox playeratack;
-
-        public Delegates(Form workform, PictureBox currentplayer,PictureBox attack)
+        private PictureBox playerpic;
+        private PictureBox playerattackpic;
+        private Player player;
+        public Delegates(Form workform, PictureBox currentplayer,PictureBox attack, Player playerAtributs)
         {
             form = workform;
-            player = currentplayer;
-            playeratack = attack;
+            playerpic = currentplayer;
+            playerattackpic = attack;
+            player=playerAtributs;
         }
 
 
@@ -52,8 +53,24 @@ namespace Shapes2
             }
             else
             {
-                playeratack.Visible = true;
-                
+                if (playerattackpic.Visible == false)
+                {
+
+                    if (player.playerside == false)
+                    {
+                        playerattackpic.Location = new Point(playerpic.Left - playerattackpic.Width, playerpic.Top + playerpic.Height / 2 - 15);
+                        playerattackpic.Image = Shapes2.Properties.Resources.blue_fireball_left;
+
+                    }
+                    else
+                    {
+                        playerattackpic.Location = new Point(playerpic.Right, playerpic.Top + playerpic.Height / 2 - 15);
+                        playerattackpic.Image = Shapes2.Properties.Resources.blue_fireball_right;
+
+
+                    }
+                    playerattackpic.Visible = true;
+                }
             }
         }
         public void move_left()
@@ -65,8 +82,8 @@ namespace Shapes2
             }
             else
             {
-                player.Left -= 5;
-                player.Image = Shapes2.Properties.Resources.lich_left;
+                playerpic.Left -= 5;
+                playerpic.Image = Shapes2.Properties.Resources.lich_left;
             }
         }
         public void move_right()
@@ -78,8 +95,8 @@ namespace Shapes2
             }
             else
             {
-                player.Left += 5;
-                player.Image = Shapes2.Properties.Resources.lich_right;
+                playerpic.Left += 5;
+                playerpic.Image = Shapes2.Properties.Resources.lich_right;
             }
         }
 

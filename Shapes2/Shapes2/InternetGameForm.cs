@@ -197,7 +197,7 @@ namespace Shapes2
         
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-             Delegates player2moves = new Delegates(this, player2pic,player2_atack);
+             Delegates player2moves = new Delegates(this, player2pic,player2_atack,player2);
 
             MainData.receiverUdp = new UdpClient(5002);
              while (true)

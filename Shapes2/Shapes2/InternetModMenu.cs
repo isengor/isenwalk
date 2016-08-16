@@ -60,9 +60,9 @@ namespace Shapes2
             MainData.enemyName=Encoding.ASCII.GetString(MainData.receiverUdp.Receive(ref MainData.ReceiveIpEndPoint));
             MainData.receiverUdp.Close();
             InternetGameForm game = new InternetGameForm();
-            game.player2pic.Location = new Point(126, 624);
+            game.player2pic.Location = new Point(252, 599);
             game.player2pic.Image = Shapes2.Properties.Resources.lich_right;
-            game.player1pic.Location = new Point(1226, 624);
+            game.player1pic.Location = new Point(1073, 599);
             game.player1pic.Image = Shapes2.Properties.Resources.mag_left;
 
             game.ShowDialog();

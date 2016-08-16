@@ -34,7 +34,6 @@
             this.screen = new System.Windows.Forms.Panel();
             this.block8 = new System.Windows.Forms.Panel();
             this.block9 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.block7 = new System.Windows.Forms.Panel();
             this.block1 = new System.Windows.Forms.Panel();
@@ -72,7 +71,6 @@
             this.screen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.screen.Controls.Add(this.block8);
             this.screen.Controls.Add(this.block9);
-            this.screen.Controls.Add(this.textBox1);
             this.screen.Controls.Add(this.panel2);
             this.screen.Controls.Add(this.block7);
             this.screen.Controls.Add(this.block1);
@@ -106,14 +104,6 @@
             this.block9.Name = "block9";
             this.block9.Size = new System.Drawing.Size(223, 37);
             this.block9.TabIndex = 27;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(649, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
             // 
             // panel2
             // 
@@ -205,7 +195,7 @@
             // 
             this.player2pic.BackColor = System.Drawing.SystemColors.Desktop;
             this.player2pic.Image = global::Shapes2.Properties.Resources.lich_left;
-            this.player2pic.Location = new System.Drawing.Point(1047, 323);
+            this.player2pic.Location = new System.Drawing.Point(1073, 599);
             this.player2pic.Name = "player2pic";
             this.player2pic.Size = new System.Drawing.Size(48, 46);
             this.player2pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -216,7 +206,7 @@
             // 
             this.player1pic.BackColor = System.Drawing.SystemColors.Desktop;
             this.player1pic.Image = global::Shapes2.Properties.Resources.mag_right;
-            this.player1pic.Location = new System.Drawing.Point(321, 155);
+            this.player1pic.Location = new System.Drawing.Point(252, 599);
             this.player1pic.Name = "player1pic";
             this.player1pic.Size = new System.Drawing.Size(48, 46);
             this.player1pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,7 +283,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp_1);
             this.screen.ResumeLayout(false);
-            this.screen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player1_atack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2_atack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2pic)).EndInit();
@@ -314,7 +303,6 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox player2pic;
         public System.Windows.Forms.PictureBox player1pic;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox player1_atack;
         private System.Windows.Forms.PictureBox player2_atack;
         private System.Windows.Forms.Panel block7;
