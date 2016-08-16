@@ -23,7 +23,8 @@ namespace Shapes2
         
         delegate void Delegatename(String enemyData);
         
-        InternetModMenu mainmenu = new InternetModMenu();
+      
+        
         public void getEnemyData(String enemyData)
         {
             if (InvokeRequired)
@@ -39,7 +40,7 @@ namespace Shapes2
                 MainData.senderEp = new IPEndPoint(IPAddress.Parse(enemydatarec[1]), 5002);
                 pictureBox1.Image = Shapes2.Properties.Resources.Swords;
 
-                //gameform.label2.Text = enemydatarec[0];
+               
                 startButton.Enabled = true;
                 
             }
@@ -79,8 +80,10 @@ namespace Shapes2
         private void button2_Click(object sender, EventArgs e)
         {
             backgroundWorker1.CancelAsync();
+            
+           
             this.Close();
-           mainmenu.Show();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

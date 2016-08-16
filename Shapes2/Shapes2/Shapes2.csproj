@@ -199,13 +199,21 @@
   <ItemGroup>
     <None Include="Resources\Explosion8sound.wav" />
     <None Include="Resources\Mushroomsound.wav" />
-    <None Include="Resources\Shootsound.wav" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\onecomputer.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shootsound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shootsound2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dead.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

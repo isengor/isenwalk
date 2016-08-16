@@ -41,7 +41,7 @@ namespace Shapes2
         private void button1_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+            
             Conectionwindow conectwin = new Conectionwindow();
             conectwin.ShowDialog();
         }
@@ -96,6 +96,11 @@ namespace Shapes2
             }
             else { connectionButton.Enabled = false; serverButton.Enabled = false; }
             
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
        

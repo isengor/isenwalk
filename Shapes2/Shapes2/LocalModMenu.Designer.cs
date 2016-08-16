@@ -251,7 +251,7 @@
             this.MaximizeBox = false;
             this.Name = "LocalModMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Isenwalk";
+            this.Text = "One computer mode";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

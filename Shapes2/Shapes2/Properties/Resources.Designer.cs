@@ -83,6 +83,16 @@ namespace Shapes2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dead {
+            get {
+                object obj = ResourceManager.GetObject("dead", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap explosion2 {
             get {
                 object obj = ResourceManager.GetObject("explosion2", resourceCulture);
@@ -274,6 +284,15 @@ namespace Shapes2.Properties {
         internal static System.IO.UnmanagedMemoryStream Shootsound {
             get {
                 return ResourceManager.GetStream("Shootsound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Shootsound2 {
+            get {
+                return ResourceManager.GetStream("Shootsound2", resourceCulture);
             }
         }
         

@@ -83,49 +83,15 @@ namespace Shapes2
             if (DateTime.Now.Second % 30 == 0) { mushroom.Visible = false; }
             
             
-            //player1 ATTACK!!!
-            //if (player1_atack.Visible == true && player1side == false) {
-            //    player1_atack.Left -= 25;
-            //    if (player1_atack.Left + player1_atack.Width < 0) { player1_atack.Visible = false; player1side = player1atackside; }
-            //    else if (player1_atack.Left < player2pic.Right && player1_atack.Right > player2pic.Left + player1_atack.Width / 2 && player1_atack.Bottom <= player2pic.Bottom + player1_atack.Height && player1_atack.Bottom > player2pic.Top) { player1_atack.Visible = false; progressBar2.Value -= 10; explosionsound.Play(); player2pic.Image = Shapes2.Properties.Resources.explosion2; }
-            //}
-            //else if (player1_atack.Visible == true && player1side == true) {
-            //    player1_atack.Left += 25;
-            //    if (player1_atack.Left > screen.Width) { player1_atack.Visible = false; player1side = player1atackside; }
-            //    else if (player1_atack.Right > player2pic.Left && player1_atack.Left < player2pic.Right - player1_atack.Width / 2 && player1_atack.Bottom <= player2pic.Bottom + player1_atack.Height && player1_atack.Bottom > player2pic.Top) { player1_atack.Visible = false; progressBar2.Value -= 10; explosionsound.Play(); player2pic.Image = Shapes2.Properties.Resources.explosion2; }
-            //}
+            
             player1.doAttack();
             player2.doAttack();
             //for both players, won event
             if (progressBar1.Value == 0) { player1pic.Image = Shapes2.Properties.Resources.rip3; ; timer1.Dispose(); wonform.pictureBox1.Image = Shapes2.Properties.Resources.lich_left; wonform.label1.Text = label2.Text + "! You won!"; wonform.ShowDialog(); ; this.Dispose(); }
             if (progressBar2.Value == 0) { player2pic.Image = Shapes2.Properties.Resources.rip3; timer1.Dispose(); wonform.pictureBox1.Image = Shapes2.Properties.Resources.mag_right; wonform.label1.Text = label1.Text + "! You won!"; wonform.ShowDialog(); this.Dispose(); } 
 
-            
-
-
-            
-
-
-            //player2 ATTACK!!!
-            //if (player2_atack.Visible == true && player2side == false)
-            //{
-            //    player2_atack.Left -= 25;
-            //    if (player2_atack.Left + player2_atack.Width < 0) { player2_atack.Visible = false; player2side = player2atackside; }
-            //    else if (player2_atack.Left < player1pic.Right && player2_atack.Right > player1pic.Left + player2_atack.Width / 2 && player2_atack.Bottom <= player1pic.Bottom + player2_atack.Height && player2_atack.Bottom > player1pic.Top) { player2_atack.Visible = false; progressBar1.Value -= 10; explosionsound.Play(); player1pic.Image = Shapes2.Properties.Resources.explosion2; }
-            //}
-            //else if (player2_atack.Visible == true && player2side == true)
-            //{
-            //    player2_atack.Left += 25;
-            //    if (player2_atack.Left > screen.Width) { player2_atack.Visible = false; player2side = player2atackside; }
-            //    else if (player2_atack.Right > player1pic.Left && player2_atack.Left < player1pic.Right - player2_atack.Width / 2 && player2_atack.Bottom <= player1pic.Bottom + player2_atack.Height && player2_atack.Bottom > player1pic.Top) { player2_atack.Visible = false; progressBar1.Value -= 10; explosionsound.Play(); player1pic.Image = Shapes2.Properties.Resources.explosion2; }
-            //}
-
-
-
-           
-
-
-
+                    
+                               
             //side portals
             if (player1pic.Left < screen.Left - player1pic.Width) { player1pic.Left = screen.Right; }
                     else if (player1pic.Right - player1pic.Width > screen.Right) { player1pic.Left = screen.Left - player1pic.Width; }
