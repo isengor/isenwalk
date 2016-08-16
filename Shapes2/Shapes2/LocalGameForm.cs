@@ -51,7 +51,7 @@ namespace Shapes2
             player1.playeratackside = true;
             player2 = new Player(player2pic, player1pic, player2_atack, progressBar1);
             mushroomsound.Stream = Shapes2.Properties.Resources.Mushroomsound;
-            shootsound.Stream = Shapes2.Properties.Resources.Shootsound;
+            shootsound.Stream = Shapes2.Properties.Resources.fireball;
             
            
 

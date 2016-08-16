@@ -42,7 +42,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(63, 78);
+            this.button1.Location = new System.Drawing.Point(66, 97);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 31);
             this.button1.TabIndex = 1;
@@ -55,7 +55,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(383, 78);
+            this.button2.Location = new System.Drawing.Point(386, 97);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(208, 31);
             this.button2.TabIndex = 2;
@@ -68,7 +68,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(236, 283);
+            this.button3.Location = new System.Drawing.Point(237, 312);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(183, 30);
             this.button3.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox3.Image = global::Shapes2.Properties.Resources.wifi;
-            this.pictureBox3.Location = new System.Drawing.Point(457, 134);
+            this.pictureBox3.Location = new System.Drawing.Point(460, 153);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 49);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,7 +91,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
             this.pictureBox2.Image = global::Shapes2.Properties.Resources.onecomputer;
-            this.pictureBox2.Location = new System.Drawing.Point(130, 133);
+            this.pictureBox2.Location = new System.Drawing.Point(133, 152);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(65, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

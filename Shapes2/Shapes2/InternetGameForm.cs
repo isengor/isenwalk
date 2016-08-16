@@ -23,8 +23,7 @@ namespace Shapes2
                 new SoundPlayer();
         SoundPlayer shootsound =
            new SoundPlayer();
-        SoundPlayer explosionsound =
-          new SoundPlayer();
+        
        
 
         private static int G = 31;
@@ -47,8 +46,8 @@ namespace Shapes2
             label1.Text = MainData.myName;
             label2.Text = MainData.enemyName;
             mushroomsound.Stream = Shapes2.Properties.Resources.Mushroomsound;
-            shootsound.Stream = Shapes2.Properties.Resources.Shootsound;
-            explosionsound.Stream = Shapes2.Properties.Resources.Explosion8sound;
+            shootsound.Stream = Shapes2.Properties.Resources.fireball;
+            
         }
 
        
@@ -211,8 +210,8 @@ namespace Shapes2
                     
                     case 1: if (player2.jump != true) { player2.jump = player2moves.move_up(); force2 = G; } break; 
                     case 2: player2moves.atack(); break;
-                    case 3: player2moves.move_left(); break;
-                    case 4: player2moves.move_right(); break;
+                    case 3: player2moves.move_left(); player2.playeratackside = false; if (player2_atack.Visible == false) player2.playerside = false; break;
+                    case 4: player2moves.move_right(); player2.playeratackside = true; if (player2_atack.Visible == false) player2.playerside = true; break;
 
                 }
 
