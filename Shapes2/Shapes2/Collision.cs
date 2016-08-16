@@ -12,7 +12,8 @@ namespace Shapes2
         public bool blockstanding;
         public bool jump;
         public string actualblock;
-        public bool moveDown, moveLeft, moveRight;
+        public bool moveLeft, moveRight;
+        public bool playerside, playeratackside;
 
         public Collision(System.Windows.Forms.Control pl)
         {
@@ -22,9 +23,11 @@ namespace Shapes2
 
             blockstanding = false;
             actualblock = null;
-            moveDown = false;
+            
             moveLeft = false;
             moveRight = false;
+            playerside = false;
+            playeratackside = false;
         }
 
 

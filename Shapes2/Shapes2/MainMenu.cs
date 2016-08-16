@@ -29,5 +29,18 @@ namespace Shapes2
             localgamemenu.ShowDialog();
             
         }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox3.BackColor = Color.Transparent;
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InternetModMenu ipmenu = new InternetModMenu();
+            ipmenu.ShowDialog();
+        }
     }
 }

@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Atack.cs" />
     <Compile Include="Collision.cs" />
     <Compile Include="Conectionwindow.cs">
       <SubType>Form</SubType>

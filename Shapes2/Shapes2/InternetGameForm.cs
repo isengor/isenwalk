@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -18,27 +19,36 @@ namespace Shapes2
     public partial class InternetGameForm : Form
     {
 
-
-        //bool player1side = true, player2side = false;
-        //bool player1atackside = true, player2atackside = false;
+        SoundPlayer mushroomsound =
+                new SoundPlayer();
+        SoundPlayer shootsound =
+           new SoundPlayer();
+        SoundPlayer explosionsound =
+          new SoundPlayer();
+       
 
         private static int G = 31;
         private static int force=0, force2=0;
 
-        //MainMenu mainmenu = new MainMenu();
+        
         
         Player player1, player2;
-
+        
         public InternetGameForm()
         {
 
             InitializeComponent();
             
-            player1 = new Player(player1pic);
-            player2 = new Player(player2pic);
+            player1 = new Player(player1pic,player2pic,player1_atack,progressBar2);
+            player2 = new Player(player2pic,player1pic,player2_atack,progressBar1);
+            player1.playerside = true;
+            player1.playeratackside = true;
+
             label1.Text = MainData.myName;
             label2.Text = MainData.enemyName;
-          
+            mushroomsound.Stream = Shapes2.Properties.Resources.Mushroomsound;
+            shootsound.Stream = Shapes2.Properties.Resources.Shootsound;
+            explosionsound.Stream = Shapes2.Properties.Resources.Explosion8sound;
         }
 
        
@@ -46,9 +56,10 @@ namespace Shapes2
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            textBox1.Text = (Convert.ToString(screen.Height))+"   "+(Convert.ToString(this.Height));
             
-            if (player1.moveDown == true) { player1pic.Top += 5; positionSend(2); }
+            player1.doAttack();
+            player2.doAttack();
+            
             if (player1.moveLeft == true) { player1pic.Left -= 5; positionSend(3); }
             if (player1.moveRight == true) { player1pic.Left += 5; positionSend(4); }
 
@@ -131,9 +142,37 @@ namespace Shapes2
                     }
                 }
 
+                if (e.KeyCode == Keys.Space)
+                {
 
-                if (e.KeyCode == Keys.Left) { player1atackside = false; if (player1_atack.Visible == false) player1side = false; player1.moveLeft = true; player1pic.Image = Shapes2.Properties.Resources.mag_left; }
-                if (e.KeyCode == Keys.Right) { player1atackside = true; if (player1_atack.Visible == false) player1side = true; player1.moveRight = true; player1pic.Image = Shapes2.Properties.Resources.mag_right; }
+
+                    if (player1_atack.Visible == false)
+                    {
+                        shootsound.Play();
+                        if (player1.playerside == false)
+                        {
+                            player1_atack.Location = new Point(player1pic.Left - player1_atack.Width, player1pic.Top + player1pic.Height / 2 - 15);
+                            player1_atack.Image = Shapes2.Properties.Resources.fireball3_left;
+                            positionSend(2);
+                        }
+                        else
+                        {
+                            player1_atack.Location = new Point(player1pic.Right, player1pic.Top + player1pic.Height / 2 - 15);
+                            player1_atack.Image = Shapes2.Properties.Resources.fireball3;
+                            positionSend(2);
+
+                        }
+                        player1_atack.Visible = true;
+
+
+
+                    }
+                
+                
+                }
+
+                if (e.KeyCode == Keys.Left) { player1.playeratackside = false; if (player1_atack.Visible == false) player1.playerside = false; player1.moveLeft = true; player1pic.Image = Shapes2.Properties.Resources.mag_left; }
+                if (e.KeyCode == Keys.Right) { player1.playeratackside = true; if (player1_atack.Visible == false) player1.playerside = true; player1.moveRight = true; player1pic.Image = Shapes2.Properties.Resources.mag_right; }
             
 
             
@@ -143,7 +182,7 @@ namespace Shapes2
         {
 
             
-            if (e.KeyCode == Keys.Down) { player1.moveDown = false; }
+            
             if (e.KeyCode == Keys.Left) { player1.moveLeft = false;  }
             if (e.KeyCode == Keys.Right) { player1.moveRight = false;  }
 

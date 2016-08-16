@@ -17,7 +17,6 @@ C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.Properties.Res
 C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.csproj.GenerateResource.Cache
 C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.csprojResolveAssemblyReference.cache
 C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.Conectionwindow.resources
-C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.GameForm.resources
 C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.MainMenu.resources
 C:\Users\User\Desktop\MyProject\Shapes2\Shapes2\bin\Debug\Shapes2.exe.config
 C:\Users\User\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.exe
@@ -45,3 +44,8 @@ C:\Users\Ilya\Desktop\Shapes2\Shapes2\obj\Debug\Shapes2.csproj.GenerateResource.
 C:\Users\Ilya\Desktop\Shapes2\Shapes2\obj\Debug\Shapes2.LocalGameForm.resources
 C:\Users\Ilya\Desktop\Shapes2\Shapes2\obj\Debug\Shapes2.LocalModMenu.resources
 C:\Users\Ilya\Desktop\Shapes2\Shapes2\obj\Debug\Shapes2.MainMenu.resources
+C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.LocalGameForm.resources
+C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.InternetGameForm.resources
+C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.InternetModMenu.resources
+C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.LocalModMenu.resources
+C:\Users\Ilya\Desktop\MyProject\Shapes2\Shapes2\obj\Debug\Shapes2.Wonform.resources

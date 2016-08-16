@@ -22,11 +22,11 @@ namespace Shapes2
         private PictureBox player;
         private PictureBox playeratack;
 
-        public Delegates(Form workform, PictureBox currentplayer,PictureBox atack)
+        public Delegates(Form workform, PictureBox currentplayer,PictureBox attack)
         {
             form = workform;
             player = currentplayer;
-            playeratack = atack;
+            playeratack = attack;
         }
 
 
@@ -52,7 +52,8 @@ namespace Shapes2
             }
             else
             {
-                player.Top += 5;
+                playeratack.Visible = true;
+                
             }
         }
         public void move_left()

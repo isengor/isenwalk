@@ -16,8 +16,7 @@ namespace Shapes2
     public partial class LocalGameForm : Form
     {
        
-        bool player1side = true, player2side = false;
-        bool player1atackside = true, player2atackside = false;
+        
 
         int G = 31;
         
@@ -36,8 +35,7 @@ namespace Shapes2
                 new SoundPlayer();
             SoundPlayer shootsound =
                new SoundPlayer();
-            SoundPlayer explosionsound =
-              new SoundPlayer();
+            
         
 
 
@@ -47,12 +45,14 @@ namespace Shapes2
             
 
             InitializeComponent();
-          
-            player1 = new Player(player1pic);
-            player2 = new Player(player2pic);
+
+            player1 = new Player(player1pic, player2pic, player1_atack, progressBar2);
+            player1.playerside = true;
+            player1.playeratackside = true;
+            player2 = new Player(player2pic, player1pic, player2_atack, progressBar1);
             mushroomsound.Stream = Shapes2.Properties.Resources.Mushroomsound;
             shootsound.Stream = Shapes2.Properties.Resources.Shootsound;
-            explosionsound.Stream = Shapes2.Properties.Resources.Explosion8sound;
+            
            
 
             
@@ -84,17 +84,18 @@ namespace Shapes2
             
             
             //player1 ATTACK!!!
-            if (player1_atack.Visible == true && player1side == false) {
-                player1_atack.Left -= 25;
-                if (player1_atack.Left + player1_atack.Width < 0) { player1_atack.Visible = false; player1side = player1atackside; }
-                else if (player1_atack.Left < player2pic.Right && player1_atack.Right > player2pic.Left + player1_atack.Width / 2 && player1_atack.Bottom <= player2pic.Bottom + player1_atack.Height && player1_atack.Bottom > player2pic.Top) { player1_atack.Visible = false; progressBar2.Value -= 10; explosionsound.Play(); player2pic.Image = Shapes2.Properties.Resources.explosion2; }
-            }
-            else if (player1_atack.Visible == true && player1side == true) {
-                player1_atack.Left += 25;
-                if (player1_atack.Left > screen.Width) { player1_atack.Visible = false; player1side = player1atackside; }
-                else if (player1_atack.Right > player2pic.Left && player1_atack.Left < player2pic.Right - player1_atack.Width / 2 && player1_atack.Bottom <= player2pic.Bottom + player1_atack.Height && player1_atack.Bottom > player2pic.Top) { player1_atack.Visible = false; progressBar2.Value -= 10; explosionsound.Play(); player2pic.Image = Shapes2.Properties.Resources.explosion2; }
-            }
-
+            //if (player1_atack.Visible == true && player1side == false) {
+            //    player1_atack.Left -= 25;
+            //    if (player1_atack.Left + player1_atack.Width < 0) { player1_atack.Visible = false; player1side = player1atackside; }
+            //    else if (player1_atack.Left < player2pic.Right && player1_atack.Right > player2pic.Left + player1_atack.Width / 2 && player1_atack.Bottom <= player2pic.Bottom + player1_atack.Height && player1_atack.Bottom > player2pic.Top) { player1_atack.Visible = false; progressBar2.Value -= 10; explosionsound.Play(); player2pic.Image = Shapes2.Properties.Resources.explosion2; }
+            //}
+            //else if (player1_atack.Visible == true && player1side == true) {
+            //    player1_atack.Left += 25;
+            //    if (player1_atack.Left > screen.Width) { player1_atack.Visible = false; player1side = player1atackside; }
+            //    else if (player1_atack.Right > player2pic.Left && player1_atack.Left < player2pic.Right - player1_atack.Width / 2 && player1_atack.Bottom <= player2pic.Bottom + player1_atack.Height && player1_atack.Bottom > player2pic.Top) { player1_atack.Visible = false; progressBar2.Value -= 10; explosionsound.Play(); player2pic.Image = Shapes2.Properties.Resources.explosion2; }
+            //}
+            player1.doAttack();
+            player2.doAttack();
             //for both players, won event
             if (progressBar1.Value == 0) { player1pic.Image = Shapes2.Properties.Resources.rip3; ; timer1.Dispose(); wonform.pictureBox1.Image = Shapes2.Properties.Resources.lich_left; wonform.label1.Text = label2.Text + "! You won!"; wonform.ShowDialog(); ; this.Dispose(); }
             if (progressBar2.Value == 0) { player2pic.Image = Shapes2.Properties.Resources.rip3; timer1.Dispose(); wonform.pictureBox1.Image = Shapes2.Properties.Resources.mag_right; wonform.label1.Text = label1.Text + "! You won!"; wonform.ShowDialog(); this.Dispose(); } 
@@ -106,18 +107,18 @@ namespace Shapes2
 
 
             //player2 ATTACK!!!
-            if (player2_atack.Visible == true && player2side == false)
-            {
-                player2_atack.Left -= 25;
-                if (player2_atack.Left + player2_atack.Width < 0) { player2_atack.Visible = false; player2side = player2atackside; }
-                else if (player2_atack.Left < player1pic.Right && player2_atack.Right > player1pic.Left + player2_atack.Width / 2 && player2_atack.Bottom <= player1pic.Bottom + player2_atack.Height && player2_atack.Bottom > player1pic.Top) { player2_atack.Visible = false; progressBar1.Value -= 10; explosionsound.Play(); player1pic.Image = Shapes2.Properties.Resources.explosion2; }
-            }
-            else if (player2_atack.Visible == true && player2side == true)
-            {
-                player2_atack.Left += 25;
-                if (player2_atack.Left > screen.Width) { player2_atack.Visible = false; player2side = player2atackside; }
-                else if (player2_atack.Right > player1pic.Left && player2_atack.Left < player1pic.Right - player2_atack.Width / 2 && player2_atack.Bottom <= player1pic.Bottom + player2_atack.Height && player2_atack.Bottom > player1pic.Top) { player2_atack.Visible = false; progressBar1.Value -= 10; explosionsound.Play(); player1pic.Image = Shapes2.Properties.Resources.explosion2; }
-            }
+            //if (player2_atack.Visible == true && player2side == false)
+            //{
+            //    player2_atack.Left -= 25;
+            //    if (player2_atack.Left + player2_atack.Width < 0) { player2_atack.Visible = false; player2side = player2atackside; }
+            //    else if (player2_atack.Left < player1pic.Right && player2_atack.Right > player1pic.Left + player2_atack.Width / 2 && player2_atack.Bottom <= player1pic.Bottom + player2_atack.Height && player2_atack.Bottom > player1pic.Top) { player2_atack.Visible = false; progressBar1.Value -= 10; explosionsound.Play(); player1pic.Image = Shapes2.Properties.Resources.explosion2; }
+            //}
+            //else if (player2_atack.Visible == true && player2side == true)
+            //{
+            //    player2_atack.Left += 25;
+            //    if (player2_atack.Left > screen.Width) { player2_atack.Visible = false; player2side = player2atackside; }
+            //    else if (player2_atack.Right > player1pic.Left && player2_atack.Left < player1pic.Right - player2_atack.Width / 2 && player2_atack.Bottom <= player1pic.Bottom + player2_atack.Height && player2_atack.Bottom > player1pic.Top) { player2_atack.Visible = false; progressBar1.Value -= 10; explosionsound.Play(); player1pic.Image = Shapes2.Properties.Resources.explosion2; }
+            //}
 
 
 
@@ -140,7 +141,7 @@ namespace Shapes2
 
             //moves
 
-            if (player1.moveDown == true) { player1pic.Top += 5; }
+            
             if (player1.moveLeft == true) { player1pic.Left -= 5; }
             if (player1.moveRight == true) { player1pic.Left += 5; }
             
@@ -174,7 +175,7 @@ namespace Shapes2
             ///////////////////////////
 
             //moves
-                if (player2.moveDown == true) { player2pic.Top += 5; }
+                
                 if (player2.moveLeft == true) { player2pic.Left -= 5; }
                 if (player2.moveRight == true) { player2pic.Left += 5; }
             
@@ -209,8 +210,8 @@ namespace Shapes2
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.A) { player1atackside = false; if (player1_atack.Visible == false) player1side = false; player1.moveLeft = true; player1pic.Image = Shapes2.Properties.Resources.mag_left; }
-            if (e.KeyCode == Keys.D) { player1atackside = true; if (player1_atack.Visible == false) player1side = true; player1.moveRight = true; player1pic.Image = Shapes2.Properties.Resources.mag_right; }
+            if (e.KeyCode == Keys.A) { player1.playeratackside = false; if (player1_atack.Visible == false) player1.playerside = false; player1.moveLeft = true; player1pic.Image = Shapes2.Properties.Resources.mag_left; }
+            if (e.KeyCode == Keys.D) { player1.playeratackside = true; if (player1_atack.Visible == false) player1.playerside = true; player1.moveRight = true; player1pic.Image = Shapes2.Properties.Resources.mag_right; }
             if (e.KeyCode == Keys.Space)
             {
                 mushroom_left = rnd.Next(screen.Width - mushroom.Width);
@@ -218,7 +219,7 @@ namespace Shapes2
                 if (player1_atack.Visible == false)
                 {
                     shootsound.Play();
-                    if (player1side == false)
+                    if (player1.playerside == false)
                     {
                         player1_atack.Location = new Point(player1pic.Left - player1_atack.Width, player1pic.Top + player1pic.Height / 2 - 15);
                         player1_atack.Image = Shapes2.Properties.Resources.fireball3_left;
@@ -251,8 +252,8 @@ namespace Shapes2
             ////////////////////////
             //player2
             /////////////////////////
-            if (e.KeyCode == Keys.Left) { player2atackside = false; if (player2_atack.Visible == false) player2side = false; player2.moveLeft = true; player2pic.Image = Shapes2.Properties.Resources.lich_left; }
-            if (e.KeyCode == Keys.Right) { player2atackside = true; if (player2_atack.Visible == false) player2side = true; player2.moveRight = true; player2pic.Image = Shapes2.Properties.Resources.lich_right; }
+            if (e.KeyCode == Keys.Left) { player2.playeratackside = false; if (player2_atack.Visible == false) player2.playerside = false; player2.moveLeft = true; player2pic.Image = Shapes2.Properties.Resources.lich_left; }
+            if (e.KeyCode == Keys.Right) { player2.playeratackside = true; if (player2_atack.Visible == false) player2.playerside = true; player2.moveRight = true; player2pic.Image = Shapes2.Properties.Resources.lich_right; }
              if (e.KeyCode == Keys.Enter)
              {
 
@@ -260,7 +261,7 @@ namespace Shapes2
                  if (player2_atack.Visible == false) 
                  {
                      shootsound.Play();
-                     if (player2side == false)
+                     if (player2.playerside == false)
                      {
                          player2_atack.Location = new Point(player2pic.Left - player2_atack.Width, player2pic.Top + player2pic.Height / 2 - 15);
                          player2_atack.Image = Shapes2.Properties.Resources.blue_fireball_left;
@@ -309,7 +310,7 @@ namespace Shapes2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void Form1_Activated(object sender, EventArgs e)
