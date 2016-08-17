@@ -64,6 +64,8 @@ namespace Shapes2
             game.player2pic.Image = Shapes2.Properties.Resources.lich_right;
             game.player1pic.Location = new Point(1073, 599);
             game.player1pic.Image = Shapes2.Properties.Resources.mag_left;
+            game.progressBar2.Location = new Point(106, 30);
+            game.progressBar1.Location = new Point(1020, 30);
 
             game.ShowDialog();
         }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Shapes2
 {
-    class Player:Collision
+    public class Player:Collision
     {
 
         private PictureBox player1, player2, attack;

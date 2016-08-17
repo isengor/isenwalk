@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes2
 {
-    class Collision
+    public class Collision
     {
         private System.Windows.Forms.Control player;
         public bool blockstanding;
