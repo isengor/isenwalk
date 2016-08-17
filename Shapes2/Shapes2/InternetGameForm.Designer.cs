@@ -86,7 +86,7 @@
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(1362, 651);
+            this.screen.Size = new System.Drawing.Size(1350, 626);
             this.screen.TabIndex = 1;
             // 
             // block8
@@ -132,7 +132,7 @@
             // block6
             // 
             this.block6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block6.BackgroundImage")));
-            this.block6.Location = new System.Drawing.Point(6, 514);
+            this.block6.Location = new System.Drawing.Point(0, 514);
             this.block6.Name = "block6";
             this.block6.Size = new System.Drawing.Size(223, 37);
             this.block6.TabIndex = 24;
@@ -225,9 +225,9 @@
             this.bottom.Controls.Add(this.progressBar2);
             this.bottom.Controls.Add(this.progressBar1);
             this.bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottom.Location = new System.Drawing.Point(0, 651);
+            this.bottom.Location = new System.Drawing.Point(0, 626);
             this.bottom.Name = "bottom";
-            this.bottom.Size = new System.Drawing.Size(1362, 65);
+            this.bottom.Size = new System.Drawing.Size(1350, 65);
             this.bottom.TabIndex = 2;
             // 
             // label2
@@ -272,12 +272,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1362, 716);
+            this.ClientSize = new System.Drawing.Size(1350, 691);
             this.Controls.Add(this.screen);
             this.Controls.Add(this.bottom);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InternetGameForm";
-            this.Text = "Isenwalk";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "IsenWalks";
             this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);

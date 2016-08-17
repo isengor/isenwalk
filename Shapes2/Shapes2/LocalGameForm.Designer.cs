@@ -277,8 +277,11 @@
             this.ClientSize = new System.Drawing.Size(1286, 639);
             this.Controls.Add(this.screen);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LocalGameForm";
-            this.Text = "Form1";
+            this.Text = "IsenWalks";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
