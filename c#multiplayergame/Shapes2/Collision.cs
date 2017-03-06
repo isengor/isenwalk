@@ -33,9 +33,10 @@ namespace Shapes2
 
         public void blockcollision(System.Windows.Forms.Control block)
         {
-            
+            //if (player.Right >= block.Left && player.Bottom-player.Height/2 > block.Top && player.Top < block.Bottom && player.Left < block.Left ) { moveRight = false;  }
+            //if (player.Left <= block.Right && player.Bottom > block.Top && player.Top < block.Bottom && player.Right > block.Right ) { moveLeft = false; }
              
-            if (player.Left + player.Width - 1 > block.Left && player.Left + player.Width < block.Left + block.Width + player.Width && player.Top + player.Height >= block.Top && player.Top < block.Top)
+            if (player.Right - 1 > block.Left && player.Left + player.Width < block.Left + block.Width + player.Width && player.Top + player.Height >= block.Top && player.Top < block.Top)
                 {
 
                     player.Top = block.Location.Y - player.Height;

@@ -49,16 +49,20 @@ namespace Shapes2
         private void button2_Click(object sender, EventArgs e)
         {
 
-            
-            MainData.enemyIp = enemyIpBox.Text; // устанавливаем ip оппонента 
-            MainData.senderEp = new IPEndPoint(IPAddress.Parse(MainData.enemyIp), 5002);
-           
+            try
+            {
+                MainData.enemyIp = enemyIpBox.Text; // устанавливаем ip оппонента 
+                MainData.senderEp = new IPEndPoint(IPAddress.Parse(MainData.enemyIp), 5002);
 
-            byte[] data = Encoding.ASCII.GetBytes(MainData.myName+" "+MainData.myIp);
-            MainData.senderUdp.Send(data, data.Length, MainData.senderEp);
-            MainData.receiverUdp = new UdpClient(5002);
-            MainData.enemyName=Encoding.ASCII.GetString(MainData.receiverUdp.Receive(ref MainData.ReceiveIpEndPoint));
-            MainData.receiverUdp.Close();
+
+                byte[] data = Encoding.ASCII.GetBytes(MainData.myName + " " + MainData.myIp);
+                MainData.senderUdp.Send(data, data.Length, MainData.senderEp);
+                MainData.receiverUdp = new UdpClient(5002);
+                MainData.enemyName = Encoding.ASCII.GetString(MainData.receiverUdp.Receive(ref MainData.ReceiveIpEndPoint));
+                MainData.receiverUdp.Close();
+            }
+            catch (Exception err) { MessageBox.Show("Error! " + err.Message); return; }
+
             InternetGameForm game = new InternetGameForm();
             game.player2pic.Location = new Point(252, 599);
             game.player2pic.Image = Shapes2.Properties.Resources.lich_right;

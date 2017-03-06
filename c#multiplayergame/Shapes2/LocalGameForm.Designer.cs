@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalGameForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.screen = new System.Windows.Forms.Panel();
+            this.player1pic = new System.Windows.Forms.PictureBox();
             this.player1_atack = new System.Windows.Forms.PictureBox();
             this.player2_atack = new System.Windows.Forms.PictureBox();
             this.block7 = new System.Windows.Forms.Panel();
@@ -43,7 +44,6 @@
             this.block2 = new System.Windows.Forms.Panel();
             this.block5 = new System.Windows.Forms.Panel();
             this.player2pic = new System.Windows.Forms.PictureBox();
-            this.player1pic = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.mushroom = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,10 +52,10 @@
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.player1pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1_atack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2_atack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2pic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mushroom)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,7 @@
             // 
             this.screen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.screen.Controls.Add(this.player1pic);
             this.screen.Controls.Add(this.player1_atack);
             this.screen.Controls.Add(this.player2_atack);
             this.screen.Controls.Add(this.block7);
@@ -81,14 +82,23 @@
             this.screen.Controls.Add(this.block2);
             this.screen.Controls.Add(this.block5);
             this.screen.Controls.Add(this.player2pic);
-            this.screen.Controls.Add(this.player1pic);
             this.screen.Controls.Add(this.panel2);
             this.screen.Controls.Add(this.mushroom);
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(1286, 575);
+            this.screen.Size = new System.Drawing.Size(1350, 627);
             this.screen.TabIndex = 1;
+            // 
+            // player1pic
+            // 
+            this.player1pic.Image = global::Shapes2.Properties.Resources.mag_right;
+            this.player1pic.Location = new System.Drawing.Point(330, 174);
+            this.player1pic.Name = "player1pic";
+            this.player1pic.Size = new System.Drawing.Size(46, 46);
+            this.player1pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.player1pic.TabIndex = 3;
+            this.player1pic.TabStop = false;
             // 
             // player1_atack
             // 
@@ -115,7 +125,7 @@
             // block7
             // 
             this.block7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block7.BackgroundImage")));
-            this.block7.Location = new System.Drawing.Point(1134, 505);
+            this.block7.Location = new System.Drawing.Point(1147, 505);
             this.block7.Name = "block7";
             this.block7.Size = new System.Drawing.Size(223, 37);
             this.block7.TabIndex = 8;
@@ -139,7 +149,7 @@
             // block3
             // 
             this.block3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("block3.BackgroundImage")));
-            this.block3.Location = new System.Drawing.Point(356, 435);
+            this.block3.Location = new System.Drawing.Point(368, 434);
             this.block3.Name = "block3";
             this.block3.Size = new System.Drawing.Size(236, 37);
             this.block3.TabIndex = 8;
@@ -188,16 +198,6 @@
             this.player2pic.TabIndex = 0;
             this.player2pic.TabStop = false;
             // 
-            // player1pic
-            // 
-            this.player1pic.Image = global::Shapes2.Properties.Resources.mag_right;
-            this.player1pic.Location = new System.Drawing.Point(298, 185);
-            this.player1pic.Name = "player1pic";
-            this.player1pic.Size = new System.Drawing.Size(46, 46);
-            this.player1pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.player1pic.TabIndex = 3;
-            this.player1pic.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::Shapes2.Properties.Resources.stars;
@@ -225,9 +225,9 @@
             this.panel1.Controls.Add(this.progressBar2);
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 575);
+            this.panel1.Location = new System.Drawing.Point(0, 627);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1286, 64);
+            this.panel1.Size = new System.Drawing.Size(1350, 64);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -274,24 +274,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 639);
+            this.ClientSize = new System.Drawing.Size(1350, 691);
             this.Controls.Add(this.screen);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LocalGameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "IsenWalks";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.screen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.player1pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1_atack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2_atack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2pic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mushroom)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
